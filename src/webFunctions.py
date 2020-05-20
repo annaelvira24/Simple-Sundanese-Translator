@@ -100,7 +100,6 @@ def translate(inputSentence, method, language):
                         result = result +  dict.get(keys[i])[j] + ' | '
                     result = result + dict.get(keys[i])[j+1]
                 else:
-                    print(dict.get(keys[i]))
                     result = dict.get(keys[i])[0]
                 break
     else:
@@ -109,22 +108,16 @@ def translate(inputSentence, method, language):
                 found = matchWithMethod(method, inputSentence, keys[i])
 
                 if(found != -1):
-                    print(inputSentence)
                     result = result[:found] + dict.get(keys[i])[0] + result[found + len(keys[i]):]
                                 
                     dummyspace = ''
                     for j in range (len(dict.get(keys[i])[0])):
                         dummyspace = dummyspace + ' '
                     inputSentence = (inputSentence[:found] + dummyspace + inputSentence[found + len(keys[i]):])
-                # print(inputSentence)
+
             
     
     return result
     
-
-# inputSentence = 'kamu'
-# result = translate(inputSentence, 'regex', 'indotosunda')
-# # result = BM.bmAlgorithm(inputSentence, 'mau makan dengan saya')
-# print(result)
 
             
