@@ -4,19 +4,42 @@ Simple Sundanese to Bahasa Indonesia translator using Pattern Matching
 ## Latar Belakang
 Pada suatu hari, ada mahasiswa bernama Riyugan yang baru pindah ke Bandung. Pada awalnya dia mengalami kesulitan untuk bersosialisai dengan lingkungan sekitar karena orang-orang di lingkungannya yang baru hanya berbicara dalam bahasa Sunda. Beruntungnya Riyugan punya teman dari kampung halamannya, yaitu Anda, untuk diminta membuat penerjemah sederhana dari Bahasa Sunda ke Bahasa Indonesia begitu pula sebaliknya untuk memudahkan dirinya bersosialisasi dengan lingkungan barunya di Bandung.
 
-## Spesifikasi
-Buatlah dalam bahasa pemrograman Python, program penerjemah sederhana yang memanfaatkan algoritma String Matching (Knuth-Morris-Pratt(KMP), Boyer-Moore(BM), dan Regex), dengan spesifikasi sebagai berikut.
-1. Program mampu membaca kata atau kalimat yang akan diterjemahkan.
-2. Program akan membaca file eksternal yang berisi vocabulary Bahasa Sunda - Bahasa Indonesia (file sudah disiapkan dalam repository).
-3. Program akan melakukan penerjemahan secara perkata (untuk contoh akan ditampilkan di bawah).
-4. Program dapat memilih mau "Bahasa Sunda ke Bahasa Indonesia" atau "Bahasa Indonesia ke Bahasa Sunda".
-5. Pada saat penerjemahan "Bahasa Sunda ke Bahasa Indonesia", program mampu mengenali kata yang tidak memiliki arti (stopwords), seperti "teh" sehingga dapat diabaikan saat penerjemahan.
-6. Pada saat penerjemahan "Bahasa Indonesia ke Bahasa Sunda", program mampu menambahkan kata untuk penekanan kalimat, seperti "teh".
-7. Program dapat menampilkan hasil terjemahan.
-8. Program dibuat secara individu.
-9. Peserta akan mendapatkan nilai bonus jika mengimplementasikan dalam web (untuk bahasanya dibebaskan).
-10. Dilarang meng-copy source code program yang sudah jadi, untuk source code algoritma string matching dipersilahkan menggunakan source code dari tugas yang sudah pernah dibuat (Tugas Kecil 4).
-11. Batas pengerjaannya adalah 6 Juni 2020.
+## Getting Started
+### Prerequisites
+python 3
+```
+Windows : download python dari https://www.python.org/downloads/windows/ dan lakukan isntalasi
+Linux : sudo apt-get install python3
+```
+
+Flask 1.1.2
+```
+Windows: pip install -U flask
+Linux : sudo apt install python3-flask
+```
+
+### Instalasi
+1. Buka cmd atau terminal di directory folder scr
+2. Jalankan perintah berikut di cmd atau terminal
+```
+Windows : py web.py
+Linux : python3 web.py
+```
+3. Akan muncul tulisan berikut di cmd atau terminal
+```
+ * Serving Flask app "web" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 301-019-789
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ```
+4. Copy alamat url http://127.0.0.1:5000/ yang muncul 
+5. Buka browser (disarankan mozila firefox atau chrome)
+6. Paste url
 
 ## Contoh Kasus Uji
 ```
@@ -55,8 +78,17 @@ Indonesia : saya tidak bisa bahasa Sunda
 Sunda : abdi henteu tiasa bahasa Sunda
 ```
 
-## Pengumpulan
-1. Lakukan merge request dari hasil fork kalian ke repository ini
-2. Untuk demonya, silahkan membuat video demo penggunaan programnya, diupload ke YouTube dan sertakan linknya pada Readme.
+## Sample Screen
+<img src="sample1.jpg"/>
 
-### **_(Ubah file README ini pada repository hasil fork kalian)_**
+## Video demo
+Video demo aplikasi daat dilihat pada link berikut
+https://youtu.be/SkvzpmMLujk 
+
+
+## Built With
+* [Python](https://docs.python.org/3/)
+* [Flask](https://pypi.org/project/Flask/)
+
+## Author
+Anna Elvira Hartoyo - 13518045

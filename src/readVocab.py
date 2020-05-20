@@ -1,6 +1,10 @@
+'''
+membaca file eksternal vocab dan memasukkannya 
+ke dalam dictionary
+'''
 def fileToMap(source):
     dict = {}
-    
+
     f = open(source)
     text = f.read()
     lines = text.split('\n')
@@ -10,13 +14,10 @@ def fileToMap(source):
         # print (splitted)
         if(len(splitted) > 1):
             key = splitted[0]
-            # print (key)
             value = splitted[1]
-            # print(value)
-            dict [key] = value
+            dict.setdefault(key, [])
+            dict[key].append(value)
     
-    print (dict)
-
-fileToMap('../vocab/sunda.txt')
+    return (dict)
 
 

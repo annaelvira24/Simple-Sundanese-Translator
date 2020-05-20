@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <title>
+        Simple Sundanese Translator
+    </title>
+    <style>
+        body {font-family: "Lato", sans-serif}
+    </style>
+
+    <body>
+    
+
+        <div class = "generalCont", style = "margin-bottom: 100px;">
+            <img src = "{{url_for('static', filename='orangsunda-flip.png')}}", style="float : left;width:60px; top:100px; padding-top: 10px;padding-left:300px;"> 
+
+            <img src = "{{url_for('static', filename='orangsunda-final.png')}}", style="float : right;width:60px; top:100px; padding-top: 10px;padding-right:300px;"> 
+            <div class = "centered">
+                <h1 class = "center">
+                    WELCOME TO
+                    <br/>SIMPLE SUNDANESE TRANSLATOR
+                </h1>
+            </div>
+        </div>
+        
+
+        
+
+        <!-- form untuk input -->
+        <form action="#" method="post" id = "boxshadow">
+
+            <textarea name="inputText" placeholder="Enter text here...", rows = '8'>{{inputText}}</textarea>
+            
+            <textarea readonly name="resultText" placeholder="Translation", rows = '8'>{{translatedText}}</textarea>
+            
+            <br/>
+
+            <div class = "generalCont">
+                <div class = "row">
+                    <div class = "column">
+                        <div class = "card">
+                            <p>Select Translation :</p>
+                            <label class = "container">Indonesian to Sundanese
+                                <input type="radio" id="indotosunda" name = "language" value="indotosunda" checked>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class = "container">Sundanese to Indonesian
+                                <input type="radio" id="sundatoindo" name = "language" value="sundatoindo">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class = "column">
+                        <div class = "card">
+                            <p>Select Algorithm :</p>
+                            <label class = "container">Boyer Moore
+                                <input type="radio" id="bm" name = "algorithm" value="bm" checked>
+                                <span class="checkmark"></span>
+                            </label>
+            
+                            <label class = "container">Knuth-Morris-Pratt
+                                <input type="radio" id="kmp" name = "algorithm" value="kmp">
+                                <span class="checkmark"></span>
+                            </label>
+            
+                            <label class = "container">Regular Expression
+                                <input type="radio" id="regex" name = "algorithm" value="regex">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <button class = "button1" type="submit" value="submit">TRANSLATE !</button>
+        </form>
+        
+            
+        <!-- bagian credits -->
+        <div class = "creditsCont">
+            <a name = "credit"></a>
+            <h2 class = 'center'>CREDITS BY</h2>
+            <h3 class="center">Anna Elvira Hartoyo
+                <br/>
+                13518045
+                <br/>
+                May 2020
+            </h3>
+
+        </div>
+    
+
+    </body>
+</html>
