@@ -79,7 +79,7 @@ Sunda : abdi henteu tiasa bahasa Sunda
 ```
 
 ## Sample Screen
-<img src="sample1.jpg"/>
+<img src="sample1.png"/>
 
 ## Video demo
 Video demo aplikasi daat dilihat pada link berikut
